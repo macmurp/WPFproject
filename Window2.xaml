@@ -1,0 +1,45 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFproject"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors" x:Class="WPFproject.Window2"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+
+    <Canvas Name="Canvas1">
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="GRAVITY" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Myriad Pro Light" Canvas.Left="339.175" Canvas.Top="10">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="textBlock"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="0" To="350" BeginTime="0:0:0"
+                                Duration="0:0:1">
+                                <DoubleAnimation.EasingFunction>
+                                    <BounceEase Bounces="5" EasingMode="EaseOut" Bounciness="3"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation
+                                Storyboard.TargetName="textBlock"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="350" To="480" BeginTime="0:0:6"
+                                Duration="0:0:2">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+        <TextBlock Width="auto" Canvas.Left="705.434" Canvas.Top="385.869">
+            <Hyperlink NavigateUri="Window3.xaml">
+                Next Page
+            </Hyperlink>
+        </TextBlock>
+
+    </Canvas>
+</Window>

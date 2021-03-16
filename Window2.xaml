@@ -10,7 +10,7 @@
 
     <Canvas Name="Canvas1">
 
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="GRAVITY" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Myriad Pro Light" Canvas.Left="339.175" Canvas.Top="10">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="GRAVITY" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Myriad Pro Light" Canvas.Left="292.329" Canvas.Top="10">
             <TextBlock.Triggers>
                 <EventTrigger RoutedEvent="Window.Loaded">
                     <BeginStoryboard>
@@ -21,13 +21,13 @@
                                 From="0" To="350" BeginTime="0:0:0"
                                 Duration="0:0:1">
                                 <DoubleAnimation.EasingFunction>
-                                    <BounceEase Bounces="5" EasingMode="EaseOut" Bounciness="3"/>
+                                    <BounceEase Bounces="4" EasingMode="EaseOut" Bounciness="2"/>
                                 </DoubleAnimation.EasingFunction>
                             </DoubleAnimation>
                             <DoubleAnimation
                                 Storyboard.TargetName="textBlock"
                                 Storyboard.TargetProperty="(Canvas.Top)"
-                                From="350" To="480" BeginTime="0:0:6"
+                                From="350" To="480" BeginTime="0:0:4"
                                 Duration="0:0:2">
                             </DoubleAnimation>
                         </Storyboard>
@@ -35,11 +35,7 @@
                 </EventTrigger>
             </TextBlock.Triggers>
         </TextBlock>
-        <TextBlock Width="auto" Canvas.Left="705.434" Canvas.Top="385.869">
-            <Hyperlink NavigateUri="Window3.xaml">
-                Next Page
-            </Hyperlink>
-        </TextBlock>
+        <Button x:Name="button" Content="Next Page" Canvas.Left="707.824" Canvas.Top="386.604" Width="75" Click="button_Click" Background="Black" Foreground="White"/>
 
     </Canvas>
 </Window>

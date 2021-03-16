@@ -23,5 +23,11 @@ namespace WPFproject
         {
             InitializeComponent();
         }
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            var nextwindow = new Window3();
+            nextwindow.Show();
+            this.Close();
+        }
     }
 }

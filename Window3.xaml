@@ -7,10 +7,44 @@
         mc:Ignorable="d"
         Title="Window3" Height="450" Width="800">
     <Canvas>
-        <TextBlock Width="auto" Canvas.Left="705.434" Canvas.Top="385.869">
-            <Hyperlink NavigateUri="MainWindow.xaml">
-                Next Page
-            </Hyperlink>
+        <TextBlock x:Name="textBlock" Canvas.Left="206.608" TextWrapping="Wrap" Text="Hello WPF World" Canvas.Top="185.804" FontSize="48" FontWeight="Bold">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent= "Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="textBlock"
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                From="-200" To="200" BeginTime="0:0:0"
+                                Duration="0:0:2"
+                                />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
         </TextBlock>
+        <TextBlock x:Name="textBlock_Copy" Canvas.Left="598.888" TextWrapping="Wrap" Text="!" Canvas.Top="185.804" FontSize="48" FontWeight="Bold">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent= "Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="textBlock_Copy"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="-100" To="-100" BeginTime="0:0:0"
+                                Duration="0:0:2"
+                                />
+                            <DoubleAnimation
+                                Storyboard.TargetName="textBlock_Copy"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="-100" To="185" BeginTime="0:0:2"
+                                Duration="0:0:2"
+                                />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+        <Button x:Name="button" Content="Next Page" Canvas.Left="707.824" Canvas.Top="386.604" Width="75" Click="button_Click" Background="Black" Foreground="White"/>
     </Canvas>
 </Window>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Blend for Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF Project", "WPF Project.csproj", "{F85F0BB7-49E9-4924-A3CF-E133D145C8D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFProject", "WPFProject.csproj", "{F85F0BB7-49E9-4924-A3CF-E133D145C8D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

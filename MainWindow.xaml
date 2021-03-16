@@ -9,11 +9,8 @@
     <Canvas>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="334.691,128.88,0,0" TextWrapping="Wrap" Text="{Binding ElementName=textBox, Path=Text}" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="334.691,205.822,0,0" TextWrapping="Wrap" Text="Type here" VerticalAlignment="Top" Width="109.3"/>
-        <TextBlock Width="auto" Canvas.Left="705.434" Canvas.Top="385.869">
-            <Hyperlink NavigateUri="Window2.xaml">
-                Next Page
-            </Hyperlink>
-        </TextBlock>
+        <Button x:Name="button" Content="Next Page" Canvas.Left="707.824" Canvas.Top="386.604" Width="75" Click="button_Click" Background="Black" Foreground="White"/>
+
 
 
     </Canvas>
